@@ -1,0 +1,17 @@
+.nav-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 90px;
+    /* background-color: skyblue; */
+}
+
+.nav-parent img {
+    width: 200px;
+    height: 43px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
