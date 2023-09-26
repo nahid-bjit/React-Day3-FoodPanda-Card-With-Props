@@ -1,3 +1,7 @@
+.card-section {
+    margin: 50px 0px;
+}
+
 .card-parent {
     display: flex;
     justify-content: space-between;

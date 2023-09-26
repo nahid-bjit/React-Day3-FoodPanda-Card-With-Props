@@ -1,5 +1,5 @@
 import "./banner.css";
-import FoodButton from "./food-button";
+import Button from "./button";
 
 const Banner = () => {
 
@@ -17,7 +17,7 @@ const Banner = () => {
                             </div>
 
                             <div className="search-right">
-                                <FoodButton />
+                                <Button text="Find Food" className="btn-food" onClick={() => alert("Find Food button Clicked!")} />
                             </div>
                         </div>
                     </div>

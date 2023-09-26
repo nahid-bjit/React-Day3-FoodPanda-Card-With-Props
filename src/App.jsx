@@ -2,6 +2,8 @@ import Nav from "./components/nav";
 import Banner from "./components/banner";
 import Card from "./components/card";
 import "./components/card.css";
+import SignupForm from "./components/signup-form";
+import FoodList from './components/FoodList';
 
 function App() {
   const cardData = [
@@ -49,6 +51,10 @@ function App() {
               );
             })}
         </div>
+
+        < SignupForm />
+
+        <FoodList />
       </div>
     </>
   );

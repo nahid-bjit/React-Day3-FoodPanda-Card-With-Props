@@ -1,6 +1,5 @@
 import "./nav.css"
-import LoginButton from "./login-button";
-import SignupButton from "./signup-button";
+import Button from "./button";
 
 const Nav = () => {
     return (
@@ -12,8 +11,8 @@ const Nav = () => {
                         <img src="../src/assets/logo.jpg" alt="" />
                     </div>
                     <div className="buttons">
-                        < LoginButton />
-                        < SignupButton />
+                        <Button text="Login" className="btn-login" onClick={() => alert("Login Clicked!")} />
+                        <Button text="Sign Up" className="btn-signup" onClick={() => alert("Sign Up Clicked!")} />
                     </div>
                 </div>
             </nav>
