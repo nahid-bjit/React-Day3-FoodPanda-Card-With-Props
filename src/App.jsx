@@ -3,7 +3,10 @@ import Banner from "./components/banner";
 import Card from "./components/card";
 import "./components/card.css";
 import SignupForm from "./components/signup-form";
-import FoodList from './components/FoodList';
+import FoodList from "./components/FoodList";
+import FoodMenu from "./components/FoodMenu";
+import { CartProvider } from "./contexts/CartContext";
+import FoodItem from "./components/FoodItem";
 
 function App() {
   const cardData = [
@@ -30,33 +33,40 @@ function App() {
   ];
 
   return (
-    <>
-      <div>
-        <Nav />
+    <CartProvider>
+      <>
         <div>
-          <Banner />
+          <Nav />
+          <div>
+            <Banner />
+          </div>
+          <div className="card-parent">
+            {cardData.length > 0 &&
+              cardData.map((card, i) => {
+                return (
+                  <div key={card.id}>
+                    <Card
+                      title={card.title}
+                      description={card.description}
+                      imageUrl={card.imageUrl}
+
+                    />
+                  </div>
+                );
+              })}
+          </div>
+
+          < SignupForm />
+
+          <FoodList />
+
+          <div>
+            <FoodMenu />
+          </div>
+
         </div>
-        <div className="card-parent">
-          {cardData.length > 0 &&
-            cardData.map((card, i) => {
-              return (
-                <div key={card.id}>
-                  <Card
-                    title={card.title}
-                    description={card.description}
-                    imageUrl={card.imageUrl}
-
-                  />
-                </div>
-              );
-            })}
-        </div>
-
-        < SignupForm />
-
-        <FoodList />
-      </div>
-    </>
+      </>
+    </CartProvider>
   );
 }
 
